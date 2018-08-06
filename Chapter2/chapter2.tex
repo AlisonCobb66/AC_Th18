@@ -1,7 +1,9 @@
 %*******************************************************************************
 %****************************** Second Chapter *********************************
 %*******************************************************************************
-\chapter{Study}  
+\graphicspath{{Chapter2/Figs/}}
+
+\chapter{Seasonal predictability of tropical storms in southern and central China}  
 
 \section{Aims}
 \begin{itemize}
@@ -14,13 +16,13 @@
 \section{Methods}
 \subsection{Tropical storm data}
 
-The Joint Typhoon Warning Center (JTWC) Best Track dataset provides the tropical storm data and was obtained from the IBTrACS database (Knapp et al, 2010). Any storms in the West Pacific that have a start time during the months of June to October and have a maximum intensity of least 34 knots (17 m/s, 38 mph) are selected. The dataset includes data on the position, maximum sustained winds, and minimum central pressure for every tropical cyclone globally at 6-hr intervals in UTC.
+The Joint Typhoon Warning Center (JTWC) Best Track dataset provides the tropical storm data and was obtained from the IBTrACS database \cite{knapp2010international}. Any storms in the West Pacific that have a start time during the months of June to October and have a maximum intensity of least 34 knots (17 m/s, 38 mph) are selected. The dataset includes data on the position, maximum sustained winds, and minimum central pressure for every tropical cyclone globally at 6-hr intervals in UTC.
 
 %The wind speed reported in this dataset is the maximum sustained wind over the 6 hourly time step?? also gusts?@!!! CHECK MSW used
 
 \begin{figure}[h]
 	\centering
-	\noindent\includegraphics[width=20pc,angle=0]{Y:/Code_Data/Chapter1/Plots/Maps/China_domain.png}
+	\noindent\includegraphics[width=20pc,angle=0]{China_domain.png}
 	\caption{Domain marking landfalling storms in the southern and central China domain}\label{fig:landfall_domain}
 \end{figure}
 
@@ -125,7 +127,7 @@ For each grid point where variable data was available, the time series was corre
 
 \begin{figure}
 	\centering
-	\noindent\includegraphics[width=20pc,angle=0]{Y:/Code_Data/Chapter1/Plots_new/Charts/SST_ACE_corr.png}
+	\noindent\includegraphics[width=20pc,angle=0]{SST_ACE_corr.png}
 	\caption{Correlation of ACE(10$^4$kt$^2$) and SST($^0$C) time series at one grid point. Pearson R correlation and p-value shown.}\label{fig:corr_graph}
 \end{figure}
 
@@ -140,8 +142,6 @@ For each grid point where variable data was available, the time series was corre
 Storm activity was determined by storm frequency, ACE and PDI. In the low intensity group (tropical storms and tropical depressions), there are 204 storms over the 57 year period. There are 177 in the medium intensity (categories 1, and 2), and 63 in the high intensity (categories 3, 4 and 5).
 
 ACE and PDI were calculated in two ways. Firstly, by just using the storm time steps whilst within the domain (ACE domain), and second, by calculating the ACE along the entire storm track (ACE / PDI entire) (figure \ref{fig:landfall_domain}). These different ACE and PDI values are correlated with each other and the frequency values (\ref{tcorrs2}).
-
-
 
 
 \begin{table}
@@ -180,9 +180,9 @@ When comparing the 'entire' together and 'domain' together, the ACE and PDI time
 Annual storm frequency shows interannual variation across all categories (figure \ref{fig:counts}).
 
 \begin{figure}
-	\subfloat[Low]{\includegraphics[width=1.9in]{Y:/Code_Data/Chapter1/Plots_new/Charts/ACE_count_63.png}} 
-	\subfloat[Medium]{\includegraphics[width=1.9in]{Y:/Code_Data/Chapter1/Plots_new/Charts/ACE_count_95.png}} 
-	\subfloat[High]{\includegraphics[width=1.9in]{Y:/Code_Data/Chapter1/Plots_new/Charts/ACE_count_plus.png}} 
+	\subfloat[Low]{\includegraphics[width=1.9in]{ACE_count_63.png}} 
+	\subfloat[Medium]{\includegraphics[width=1.9in]{ACE_count_95.png}} % Y:/Code_Data/Chapter1/Plots_new/Charts
+	\subfloat[High]{\includegraphics[width=1.9in]{ACE_count_plus.png}} 
 	\caption{Time series of ACE (domain and entire) and frequency for each category. a) low, b) medium, c) high }\label{fig:counts}
 \end{figure}
 
@@ -206,14 +206,15 @@ This first section examines the relationship between the ocean (SST and OHC) wit
 	
 \begin{figure}
 	\centering
-	\subfloat[ACE:low]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/ACE/inpoly/sst/sst_curr_JJASO&ACEJJASO63inpolycorr_total.png}}
-	\subfloat[Count:low]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO63inp_intcorr_total.png}}
-	\subfloat[ACE:medium]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/ACE/inpoly/sst/sst_curr_JJASO&ACEJJASO95inpolycorr_total.png}}
-	\subfloat[Count:medium]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO95inp_intcorr_total.png}}
-	\subfloat[ACE:high]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/ACE/inpoly/sst/sst_curr_JJASO&ACEJJASOplusinpolycorr_total.png}}
-	\subfloat[Count:high]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
-	\subfloat[ACE:all]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/ACE/inpoly/sst/sst_curr_JJASO&ACEJJASOallcatsinpolycorr_total.png}}
-	\subfloat[Count:all]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASOallcatsinp_intcorr_total.png}}
+	\subfloat[ACE:low]{\includegraphics[width=2.6in]{sst_curr_JJASO&ACEJJASO63inpolycorr_total.png}}
+	\subfloat[Count:low]{\includegraphics[width=2.6in]{sst_curr_JJASO&countJJASO63inp_intcorr_total.png}}
+	\subfloat[ACE:medium]{\includegraphics[width=2.6in]{sst_curr_JJASO&ACEJJASO95inpolycorr_total.png}}
+	\subfloat[Count:medium]{\includegraphics[width=2.6in]{sst_curr_JJASO&countJJASO95inp_intcorr_total.png}}
+	\subfloat[ACE:high]{\includegraphics[width=2.6in]{sst_curr_JJASO&ACEJJASOplusinpolycorr_total.png}}
+	\subfloat[Count:high]{\includegraphics[width=2.6in]{sst_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
+	\subfloat[ACE:all]{\includegraphics[width=2.6in]{sst_curr_JJASO&ACEJJASOallcatsinpolycorr_total.png}}
+	\subfloat[Count:all]{\includegraphics[width=2.6in]{sst_curr_JJASO&countJJASOallcatsinp_intcorr_total.png}} % Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/  
+	% Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/ACE/inpoly/sst/
 	
 	\caption{SST-JJASO correlated with (1) and ACE and (2) count over the period 1958-2014. a) Low (tropical storms and tropical depressions). b) Medium (categories 1,2) c) High (categories 3, 4, 5) d) a. Stippling indicates grid points with significant correlation at the 95th percentile} \label{fig:corr_JJASO} 
 \end{figure} 
@@ -233,21 +234,21 @@ Future correlation maps will show the relationship with count, as the observatio
 
 \begin{figure}
 	\centering
-	\noindent\includegraphics[width=24pc,angle=0]{H:/Documents/Thesis/phd-thesis-template-2.2.2_AC/phd-thesis-template-2.2.2/Figs/ocean_currents2_cut.png}
+	\noindent\includegraphics[width=24pc,angle=0]{ocean_currents2_cut.png}
 	\caption{Ocean currents showing Kurushio. Source: \citep{kuroshio}}\label{fig:kuroshio}
 \end{figure}
 
 
 \begin{figure}
-	\centering
+	\centering % Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/
 	%\subfloat[1a]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/prev_sst_JFM&ACEJJASO63inpolycorr_train.png}} 
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO63inp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{sst_prev_JFM&countJJASO63inp_intcorr_total.png}}
 	%\subfloat[1b]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/prev_sst_JFM&ACEJJASO95inpolycorr_train.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO95inp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{sst_prev_JFM&countJJASO95inp_intcorr_total.png}}
 	%\subfloat[1c]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/prev_sst_JFM&ACEJJASOplusinpolycorr_train.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASOplusinp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{sst_prev_JFM&countJJASOplusinp_intcorr_total.png}}
 	%\subfloat[1d]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/prev_sst_JFM&ACEJJASOallcatsinpolycorr_train.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASOallcatsinp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{sst_prev_JFM&countJJASOallcatsinp_intcorr_total.png}}
 	\caption{SST-JFM-1 correlated with count over the period 1958-2014. a) Low (tropical storms and tropical depressions). b) Medium (categories 1,2) c) High (categories 3, 4, 5) d) All storms. Stippling indicates grid points with significant correlation at the 95th percentile} \label{fig:corr_prevJFM} 
 \end{figure} 
 
@@ -299,12 +300,12 @@ This region of interest will be further examined, concentrating on the weak and 
 
 Figure \ref {fig:SCS} shows the domain where these opposing strong correlations are apparent. 
 \begin{figure} % remove [h] and this appeared in the correct place
-	\noindent\includegraphics[width=26pc,angle=0]{Y:/Code_Data/Chapter1/Plots_new/Maps/corr_regions.png}
+	\noindent\includegraphics[width=26pc,angle=0]{corr_regions.png} % Y:/Code_Data/Chapter1/Plots_new/Maps/
 	\caption{Regions of high correlations}\label{fig:SCS}
 \end{figure}
 
 \begin{figure} % remove [h] and this appeared in the correct place
-	\noindent\includegraphics[width=26pc,angle=0]{Y:/Code_Data/Chapter1/Plots_new/Maps/nino_regions.png}
+	\noindent\includegraphics[width=26pc,angle=0]{nino_regions.png}
 	\caption{Nino regions}\label{fig:nino}
 \end{figure}
 
@@ -312,10 +313,10 @@ Figure \ref {fig:SCS} shows the domain where these opposing strong correlations 
 Figure \ref{fig:SST_JJASO} shows that during the tropical cyclone season (JJASO), there is a large region of warm SSTs, well above the 26.5$^0$C proposed threshold for genesis (section \ref{ocean}). The standard deviation of the SSTs across the period in both JJASO and JFM shows the most variation year to year in the equatorial Pacific, where the El Nino phenomenon has a signal and this shows significant interannual variability. %Off the east coast of Asia and into the Bay of Bengal, the standard deviation is 0.6 to 0.3 C??
 
 \begin{figure} % remove [h] and this appeared in the correct place
-	\subfloat[a]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/sst_JJASO_mean.png}} 
-	\subfloat[b]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/sst_JJASO_std.png}} 
-	\subfloat[c]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/sst_JFM_mean.png}} 
-	\subfloat[c]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/sst_JFM_std.png}} 
+	\subfloat[a]{\includegraphics[width=3.5in]{sst_JJASO_mean.png}} % Y:/Code_Data/Chapter1/Plots_new/Charts/
+	\subfloat[b]{\includegraphics[width=3.5in]{sst_JJASO_std.png}} 
+	\subfloat[c]{\includegraphics[width=3.5in]{sst_JFM_mean.png}} 
+	\subfloat[c]{\includegraphics[width=3.5in]{sst_JFM_std.png}} 
 	
 	\caption{SST climatology. (a) JJASO mean (b) JJASO standard deviation (c) JFM standard deviation. The standard deviations are of the JJASO mean across the 50 year training period.}\label{fig:SST_JJASO}
 \end{figure}
@@ -333,7 +334,7 @@ This period examined from 1958 and is likely to contain decadal signals. To asse
 
 \begin{figure}
 	\centering
-	\noindent\includegraphics[width=20pc,angle=0]{Y:/Code_Data/Chapter1/Plots_new/Charts/PDO_5814_filled.png}
+	\noindent\includegraphics[width=20pc,angle=0]{PDO_5814_filled.png} % Y:/Code_Data/Chapter1/Plots_new/Charts
 	\caption{The Pacific Decadal Oscillation Index}\label{fig:PDO_time}
 \end{figure}
 
@@ -358,19 +359,20 @@ The following figures show the correlation maps for each category for the three 
 
 
 \begin{figure}
-	\centering
+	\centering % Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/
 	
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO63inp_intcorr_early.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO63inp_intcorr_mid.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO63inp_intcorr_late.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_curr_JJASO&countJJASO63inp_intcorr_early.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_curr_JJASO&countJJASO63inp_intcorr_mid.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_curr_JJASO&countJJASO63inp_intcorr_late.png}}
 	
 %	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO95inp_intcorr_early.png}}
 %	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO95inp_intcorr_mid.png}}
 %	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASO95inp_intcorr_late.png}}
+% Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/
 	
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASOplusinp_intcorr_early.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASOplusinp_intcorr_mid.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_curr_JJASO&countJJASOplusinp_intcorr_late.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_curr_JJASO&countJJASOplusinp_intcorr_early.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_curr_JJASO&countJJASOplusinp_intcorr_mid.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_curr_JJASO&countJJASOplusinp_intcorr_late.png}}
 	\caption{SST-JJASO correlated with count-JJASO for within the domain for 1958-1975 (1), 1976-1997 (2), 1998-2014 (3). a. Tropical storms and tropical depressions. b. Categories 1,2 c. Categories 3, 4, 5.  Stippling shows grid points with significant correlation at 95th percentile} \label{fig:corr_JJASO_periods} 
 \end{figure} 
 
@@ -383,19 +385,19 @@ For the high intensity storms, the positive correlation at approximately 160W an
 %cHECK WHETHER PDO YEARS SHOULD BE ADJUSTED BY ONE WHEN LOOKING AT PREV YEAR
 
 \begin{figure}
-	\centering
+	\centering % Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/
 	
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO63inp_intcorr_early.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO63inp_intcorr_mid.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO63inp_intcorr_late.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASO63inp_intcorr_early.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]sst_prev_JFM&countJJASO63inp_intcorr_mid.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASO63inp_intcorr_late.png}}
 	
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO95inp_intcorr_early.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO95inp_intcorr_mid.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASO95inp_intcorr_late.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASO95inp_intcorr_early.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASO95inp_intcorr_mid.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASO95inp_intcorr_late.png}}
 	
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASOplusinp_intcorr_early.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASOplusinp_intcorr_mid.png}}
-	\subfloat[2a]{\includegraphics[width=1.8in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/sst/sst_prev_JFM&countJJASOplusinp_intcorr_late.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASOplusinp_intcorr_early.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASOplusinp_intcorr_mid.png}}
+	\subfloat[2a]{\includegraphics[width=1.8in]{sst_prev_JFM&countJJASOplusinp_intcorr_late.png}}
 	\caption{SST-JFM-1 correlated with count-JJASO for within the domain for 1958-1975 (1), 1976-1997 (2), 1998-2014 (3). a. Tropical storms and tropical depressions. b. Categories 1,2 c. Categories 3, 4, 5.  Stippling shows grid points with significant correlation at 95th percentile} \label{fig:corr_prevJFM_periods} 
 \end{figure} 
 
@@ -408,8 +410,8 @@ For the strong storms, during the warm period and mixed period, there are no sig
 It is not only the sea surface that affects tropical storm activity, but the deeper ocean can have an influence (ref section). Therefore the ocean heat content (OHC) (to 100m?) is also investigated.
 
 \begin{figure} % remove [h] and this appeared in the correct place
-	\centering
-	\noindent\includegraphics[width=30pc,angle=0]{Y:/Code_Data/Chapter1/Plots_new/Charts/ohc_JJASO_mean.png}
+	\centering % Y:/Code_Data/Chapter1/Plots_new/Charts/
+	\noindent\includegraphics[width=30pc,angle=0]{ohc_JJASO_mean.png}
 	%	\noindent\includegraphics[width=30pc,angle=0]{Y:/Code_Data/Chapter1/Plots_new/Charts/ohc_JJASO_std.png}\\
 	\caption{OHC (to 100 m) mean during JJASO}\label{fig:OHC_JJASO}
 \end{figure}
@@ -420,11 +422,11 @@ The mean OHC to 100m during the JJASO season shows a very similar pattern to SST
 Figure \ref{fig:ohc_currJJASO} shows the correlations with OHC-JJASO and count-JJASO.
 
 \begin{figure}
-	\centering
+	\centering % Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/
 
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/ohc_curr_JJASO&countJJASO63inp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{ohc_curr_JJASO&countJJASO63inp_intcorr_total.png}}
 %	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/ohc_curr_JJASO&countJJASO95inp_intcorr_total.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/ohc_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{ohc_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
 %	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/ohc_curr_JJASO&countJJASOallcatsinp_intcorr_total.png}}
 	\caption{OHC-JJASO correlated with count-JJASO for within the domain over the training period 1958-2007. a. Tropical storms and tropical depressions. b. Categories 1,2 c. Categories 3, 4, 5. Stippling shows grid points with significant correlation at 95th percentile} \label{fig:ohc_currJJASO} 
 \end{figure} 
@@ -440,10 +442,10 @@ OHC-JFM-1 shows the opposing correlations for weak and intense storms in the Eas
 
 \begin{figure}
 	\centering
-	
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/ohc_prev_JFM&countJJASO63inp_intcorr_total.png}}
+	% Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/
+	\subfloat[2a]{\includegraphics[width=2.6in]{ohc_prev_JFM&countJJASO63inp_intcorr_total.png}}
 
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/ohc/ohc_prev_JFM&countJJASOplusinp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{ohc_prev_JFM&countJJASOplusinp_intcorr_total.png}}
 
 	\caption{OHC-JFM-1 correlated with count-JJASO for within the domain over the training period 1958-2007. a. Tropical storms and tropical depressions. b. Categories 1,2 c. Categories 3, 4, 5. Stippling shows grid points with significant correlation at 95th percentile} \label{fig:ohc_prevJFM} 
 \end{figure} 
@@ -458,15 +460,15 @@ The ocean and atmosphere interact through the marine boundary layer (MBL) and li
 
 \begin{figure}
 	\centering
-	%	\subfloat[1a]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/curr_sst_JJASO&ACEJJASO63inpolycorr_trainmslp.png}} 
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/mslp/mslp_curr_JJASO&countJJASO63inp_intcorr_total.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/geop/geop_curr_JJASO&countJJASO63inp_intcorr_total.png}}
+	%	\subfloat[1a]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/curr_sst_JJASO&ACEJJASO63inpolycorr_trainmslp.png}}  % Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/mslp/
+	\subfloat[2a]{\includegraphics[width=2.6in]{mslp_curr_JJASO&countJJASO63inp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{geop_curr_JJASO&countJJASO63inp_intcorr_total.png}}
 	%\subfloat[1b]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/curr_sst_JJASO&ACEJJASO95inpolycorr_trainmslp.png}}
 %	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/mslp/mslp_curr_JJASO&countJJASO95inp_intcorr_total.png}}
 %	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/geop/geop_curr_JJASO&countJJASO95inp_intcorr_total.png}}
 	%\subfloat[1c]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/ACE/inpoly/curr_sst_JJASO&ACEJJASOplusinpolycorr_trainmslp.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/mslp/mslp_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
-	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/geop/geop_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{mslp_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
+	\subfloat[2a]{\includegraphics[width=2.6in]{geop_curr_JJASO&countJJASOplusinp_intcorr_total.png}}
 	
 %	\subfloat[2a]{\includegraphics[width=2.6in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps_final/count/inp_int/mslp/mslp_curr_JJASO&countJJASOallcatsinp_intcorr_total.png}}
 %	\subfloat[2d]{\includegraphics[width=2.4in]{Y:/Code_Data/Chapter1/Plots_new/Corr_maps/count/inp_int/curr_sst_JJASO&countJJASOallcatsinp_intcorr_traingeop.png}}	
@@ -494,11 +496,11 @@ For the high intensity storms, there is a region of signficant positive correlat
 Figure \ref{fig:mslp_JJASO} shows the mean mslp during JJASO, and the subtropical high is clearly visible, centred off the west coast of the USA and extending westwards towards Asia. The mslp during JJASO / all year? across the mid and high latitudes is more variable year to year than across the Tropics.
 
 \begin{figure} % remove [h] and this appeared in the correct place
-
-	\subfloat[a]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/mslp_JJASO_mean.png}} 
-	\subfloat[b]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/mslp_JJASO_std.png}} 
-	\subfloat[c]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/mslp_JFM_mean.png}} 
-	\subfloat[d]{\includegraphics[width=3.5in]{Y:/Code_Data/Chapter1/Plots_new/Charts/mslp_JFM_std.png}} 
+ % Y:/Code_Data/Chapter1/Plots_new/Charts/
+	\subfloat[a]{\includegraphics[width=3.5in]{mslp_JJASO_mean.png}} 
+	\subfloat[b]{\includegraphics[width=3.5in]{mslp_JJASO_std.png}} 
+	\subfloat[c]{\includegraphics[width=3.5in]{mslp_JFM_mean.png}} 
+	\subfloat[d]{\includegraphics[width=3.5in]{mslp_JFM_std.png}} 
 	
 	\caption{MSLP climatology (a) mean and (b) standard deviation during the JJASO season}\label{fig:mslp_JJASO}
 \end{figure}
